@@ -5,6 +5,9 @@ use utils::db::init_db;
 
 mod utils;
 
+// Tauri commands defined here
+// List them in the 'tauri::generate_handler![]' macro
+
 fn main() {
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![])
