@@ -17,7 +17,7 @@ const Menu = () => {
         <p class={"menu-label has-text-white"}>About</p>
         <ul class={"menu-list"}>
           <li>
-            <Link id={"menuButton"} class={"menu-item has-text-white"} to={"#"}>
+            <Link id={"menuButton"} class={"menu-item has-text-white"} to={"/"}>
               FAQ
             </Link>
           </li>
