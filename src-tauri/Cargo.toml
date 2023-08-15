@@ -3,7 +3,7 @@ name = "oceanus-app-tauri"
 version = "0.1.0"
 description ="Oceanus App"
 authors = ["CM-IV"]
-license = ""
+license = "MIT"
 repository = ""
 edition = "2021"
 
