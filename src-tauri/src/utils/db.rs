@@ -5,7 +5,7 @@ use sqlx::SqlitePool;
 
 static DATABASE: OnceLock<SqlitePool> = OnceLock::new();
 
-
+// Use this function with SQLX queries
 pub fn get_db() -> &'static SqlitePool {
     DATABASE.get().unwrap()
 }
