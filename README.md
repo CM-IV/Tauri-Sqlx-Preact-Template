@@ -1,4 +1,4 @@
-# [Tauri](https://tauri.app) + [Preact](https://preactjs.com) + [Bulma CSS](https://bulma.io/) + [TypeScript](https://typescriptlang.org) + [Sqlx](https://github.com/launchbadge/sqlx) + [Vite](https://vitejs.dev) Starter
+# [Tauri](https://tauri.app) + [Preact](https://preactjs.com) + [Bulma CSS](https://bulma.io/) + [TypeScript](https://typescriptlang.org) + [Sqlx](https://github.com/launchbadge/sqlx) + [Specta](https://github.com/oscartbeaumont/specta) + [Vite](https://vitejs.dev) Starter
 
 **Template Made By:**
 *[Oceanus Digital](https://home.civdev.xyz/)*
@@ -25,7 +25,9 @@ A starter template for [Tauri](https://tauri.app) + [Preact](https://preactjs.co
 
 - 🎨 [Bulma CSS](https://tailwindcss.com) - A CSS framework that provides ready-to-use frontend components.
 
-- 💪 [TypeScript](https://typescriptlang.org) - it's JavaScript with syntax for types.
+- 💪 [TypeScript](https://typescriptlang.org) - It's JavaScript with syntax for types.
+
+- 😤 [Specta](https://github.com/oscartbeaumont/specta) - Easily export your Rust types to other languages (TypeScript)
 
 ## Getting started
 

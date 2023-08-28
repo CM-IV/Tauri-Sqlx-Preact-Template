@@ -14,12 +14,12 @@
     "@preact/preset-vite": "^2.5.0",
     "@tauri-apps/api": "^1.4.0",
     "@tauri-apps/cli": "^1.4.0",
-    "postcss": "^8.4.27",
-    "typescript": "^5.1.6",
+    "postcss": "^8.4.28",
+    "typescript": "^5.2.2",
     "vite": "^4.4.9",
     "wouter-preact": "^2.11.0"
   },
   "dependencies": {
-    "preact": "^10.17.0"
+    "preact": "^10.17.1"
   }
 }
