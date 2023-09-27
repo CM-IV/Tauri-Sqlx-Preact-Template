@@ -1,10 +1,10 @@
-import { ComponentChildren } from "preact";
-import { Menu } from "../components/menu";
-import { Nav } from "../components/nav";
+import { JSXElement } from "solid-js";
+import { Menu } from "../components/menu"
+import { Nav } from "../components/nav"
 
 type LayoutProps = {
-    children: ComponentChildren;
-}
+    children: JSXElement;
+};
 
 const MainLayout = ({children}: LayoutProps) => {
     return (
@@ -25,4 +25,4 @@ const MainLayout = ({children}: LayoutProps) => {
 }
 
 
-export { MainLayout };
+export { MainLayout }

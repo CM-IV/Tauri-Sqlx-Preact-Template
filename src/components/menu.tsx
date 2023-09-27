@@ -1,4 +1,4 @@
-import { Link } from "wouter-preact";
+import { A } from "@solidjs/router";
 
 
 const Menu = () => {
@@ -9,17 +9,9 @@ const Menu = () => {
         <p class={"menu-label has-text-white"}>Admin</p>
         <ul class={"menu-list"}>
           <li>
-            <Link id={"menuButton"} class={"has-text-white"} to={"/"}>
+            <A id={"menuButton"} class={"has-text-white"} href={"/"}>
               Dashboard
-            </Link>
-          </li>
-        </ul>
-        <p class={"menu-label has-text-white"}>About</p>
-        <ul class={"menu-list"}>
-          <li>
-            <Link id={"menuButton"} class={"menu-item has-text-white"} to={"/"}>
-              FAQ
-            </Link>
+            </A>
           </li>
         </ul>
       </div>

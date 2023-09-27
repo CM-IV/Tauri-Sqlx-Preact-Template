@@ -11,15 +11,15 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^5.0.0",
-    "@preact/preset-vite": "^2.5.0",
+    "@solidjs/router": "^0.8.3",
     "@tauri-apps/api": "^1.4.0",
     "@tauri-apps/cli": "^1.4.0",
     "postcss": "^8.4.28",
     "typescript": "^5.2.2",
     "vite": "^4.4.9",
-    "wouter-preact": "^2.11.0"
+    "vite-plugin-solid": "^2.7.0"
   },
   "dependencies": {
-    "preact": "^10.17.1"
+    "solid-js": "^1.7.12"
   }
 }
