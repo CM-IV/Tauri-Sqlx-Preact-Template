@@ -1,17 +1,14 @@
-import { greet } from "../bindings";
 import { MainLayout } from "../layout/mainLayout";
+import { invoke } from "@tauri-apps/api/core";
 
 const Home = () => {
-  
-  greet()
-    .then((message) => {
-      console.log(message);
-    })
+  invoke("greet").then((msg) => console.log(msg));
 
   return (
     <MainLayout>
+      <h1>Hello!</h1>
     </MainLayout>
-  )
-}
+  );
+};
 
 export default Home;
