@@ -1,13 +1,74 @@
-const Nav = () => {
-    return (
-        <nav class="navbar has-shadow pb-0">
-            <div class={"navbar-brand"}>
-                <a class={"navbar-item"} href={"/"}>
-                    <svg width="32" fill={"#ffff"} height="32" viewBox="0, 0, 400,400"><path d="M23.74 1.49c-9.6 3.48-16.3 9.5-20.81 18.71L.39 25.4v142.96L3 173.7c4.78 9.78 14.38 17.38 24.33 19.27 5.7 1.08 135.12 1.02 139.86-.06 17.82-4.09 27.32-18.66 27.34-41.93v-9.57h-30.47v9.63c0 9.05-.1 9.73-1.8 11.32l-1.81 1.7H32.93L31.29 162c-2.47-3.15-2.18-129.38.3-131.2 1.29-.93 11.46-1.1 65.3-1.1h63.77l1.7 1.8c1.68 1.8 1.7 2.12 1.7 30.47v28.66h30.47V62.16c0-41.74-2.56-49.4-19.63-58.65L169.14.4 98.44.21c-67.1-.16-70.9-.1-74.7 1.28m78.6 126.24v26.18H132.03v-9.26c0-8.75.1-9.38 1.92-11.33l1.91-2.07h63.63c61.46 0 63.68.05 65.46 1.5l1.85 1.49.23 30.53.23 30.54h29.61v-31.2c0-38.79-.75-42.74-9.97-52.09-10.96-11.12-4.52-10.46-101.6-10.46h-82.96v26.17m0 122.27v45.31h82.96c82.9 0 82.96 0 87.7-1.68 16.38-5.8 23.88-17.92 23.88-38.59v-8.95H267.37l-.31 8.3c-.47 12.59 7.66 11.24-67.57 11.24h-63.63l-1.91-2.07-1.92-2.07v-56.8H102.34V250m130.08-42.67c-16.87 4.1-26.17 18.34-26.17 40.08v8.06H235.94v-7.7c0-7.3.11-7.83 2.06-9.77l2.06-2.06H400V206.25l-81.84.07c-61.38.05-82.8.3-85.74 1.01m-26.17 129.24c0 42.24 1.76 48.61 16.07 58.2 8.28 5.54 2.67 5.23 94.85 5.23H400V370.31H239.77l-1.92-2.06-1.91-2.07v-59.93H206.25v30.32"/></svg>
-                </a>
-            </div>
-        </nav>
-    )
-}
+import {
+  IconBuildingEstate,
+  IconInvoice,
+  IconBriefcase2,
+  IconDashboard,
+  IconUserCheck,
+} from "@tabler/icons-solidjs";
+import { ColorScheme } from "./colorscheme";
+import { A, useLocation } from "@solidjs/router";
 
-export { Nav };
+const navLinks = [
+  { link: "/", label: "Dashboard", icon: IconDashboard },
+  { link: "/services", label: "Services", icon: IconBriefcase2 },
+  { link: "/customers", label: "Customers", icon: IconUserCheck },
+  { link: "/properties", label: "Properties", icon: IconBuildingEstate },
+  { link: "/invoices", label: "Invoices", icon: IconInvoice },
+];
+
+export function Navbar() {
+  const location = useLocation();
+  const url = location.pathname;
+
+  const isActive = (path: string) => {
+    if (path === "/") {
+      return url === path;
+    }
+    return url.startsWith(path); // Partial match for other routes
+  };
+
+  return (
+    <div class="flex flex-col h-full p-4 bg-base-200 border-r border-base-300 w-70">
+      {/* Header section */}
+      <div class="flex justify-between items-center mb-6 px-2">
+        <span class="font-mono text-xs text-base-content/70 tracking-wider">
+          v0.0.1
+        </span>
+      </div>
+
+      {/* Main navigation */}
+      <nav class="flex-1">
+        <ul class="menu space-y-1">
+          {navLinks.map((item) => (
+            <li>
+              <A
+                href={item.link}
+                class={`flex items-center gap-3 py-3 px-8 rounded-lg transition-all duration-200
+                  ${
+                    isActive(item.link)
+                      ? "active bg-primary text-primary-content shadow-md"
+                      : "hover:bg-base-300 hover:text-base-content"
+                  }`}
+                activeClass="active"
+              >
+                <item.icon
+                  size={20}
+                  stroke={isActive(item.link) ? "2" : "1.75"}
+                  class="flex-shrink-0"
+                />
+                <span class="text-sm font-medium">{item.label}</span>
+              </A>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      {/* Footer section */}
+      <footer class="pt-4 mt-auto border-t border-base-300">
+        <div class="flex justify-center p-2">
+          <ColorScheme />
+        </div>
+      </footer>
+    </div>
+  );
+}

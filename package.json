@@ -10,16 +10,20 @@
     "tauri": "tauri"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^5.0.0",
-    "@solidjs/router": "^0.8.3",
-    "@tauri-apps/api": "^1.4.0",
-    "@tauri-apps/cli": "^1.4.0",
-    "postcss": "^8.4.28",
+    "@solidjs/router": "^0.15.3",
+    "@tauri-apps/api": "^2.5.0",
+    "@tauri-apps/cli": "^2.5.0",
+    "daisyui": "^5.0.43",
     "typescript": "^5.2.2",
-    "vite": "^4.4.9",
+    "vite": "^6.3.5",
     "vite-plugin-solid": "^2.7.0"
   },
   "dependencies": {
-    "solid-js": "^1.7.12"
-  }
+    "@tabler/icons-solidjs": "^3.34.0",
+    "@tailwindcss/vite": "^4.1.8",
+    "solid-js": "^1.7.12",
+    "tailwindcss": "^4.1.8",
+    "theme-change": "^2.5.0"
+  },
+  "packageManager": "pnpm@10.10.0+sha512.d615db246fe70f25dcfea6d8d73dee782ce23e2245e3c4f6f888249fb568149318637dca73c2c5c8ef2a4ca0d5657fb9567188bfab47f566d1ee6ce987815c39"
 }
